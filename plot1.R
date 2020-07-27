@@ -6,8 +6,6 @@ data_source <- readRDS("../Source_Classification_Code.rds")
 # from 1999 to 2008?
 total_emissions_by_year <- aggregate(data_summary$Emissions, by=list(year=data_summary$year), FUN=sum)
 
-total_emissions_by_year
-
 # 3. Create the plot
 png("plot1.png", width=480, height=480)
 plot(total_emissions_by_year$year, total_emissions_by_year$x,
